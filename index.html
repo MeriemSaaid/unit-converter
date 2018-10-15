@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit converter</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center display-4 mb-3">Unit converter</h1>
+        <form>
+            <div class="input-group">
+                <input type="number" class="form-control form-control-lg" id="inputValue" name="inputValue" placeholder="Enter Pounds">
+                <div class="input-group-append">
+                    <select class="btn" id="unit">
+                        <optgroup label="Weight">
+                            <option>lbs</option>
+                            <option>grams</option>
+                            <option>kilograms</option>
+                            <option>ounces</option>
+                        </optgroup>
+                        <optgroup label="Temprature">
+                            <option>Fahrenheit</option>
+                            <option>Centigrade</option>
+                        </optgroup>
+                        <optgroup label="Distance">
+                            <option>meters</option>
+                            <option>miles</option>
+                            <option>inches</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <br>
+        <div id="output">
+            <!--Gram-->
+            <!--<div class="card bg-primary mb-2">
+                <div class="card-header">
+                    <h4>Grams:</h4>
+                    <div id="gram"></div>
+                </div>
+            </div>-->
+            <!--Kilo-->
+            <!--<div class="card bg-success mb-2">
+                <div class="card-header">
+                    <h4>Kilos:</h4>
+                    <div id="kilo"></div>
+                </div>
+            </div>
+            <div class="card bg-danger mb-2">
+                <div class="card-header">
+                    <h4>Ounces:</h4>
+                    <div id="ounce"></div>
+                </div>
+            </div>-->
+            <!--Ounce-->
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
