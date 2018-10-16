@@ -21,7 +21,7 @@ function convertUnit(e) {
       convertGrams(input);
       break;
     case "kilograms":
-      //convertGrams(input);
+      convertKilos(input);
       break;
     /*case "meters":
       //convertMeters(input);
@@ -95,7 +95,7 @@ function convertLbs(num) {
   div_ounces.appendChild(sb_div_ounces);
   output_div.appendChild(div_ounces);
 }
-//Convert to grams
+//Convert from grams
 function convertGrams(num) {
   var pounds = num * 0.00220462;
   var kilos = num / 100;
@@ -142,6 +142,74 @@ function convertGrams(num) {
   sb_div_kilo.appendChild(result_kilo);
   div_kilo.appendChild(sb_div_kilo);
   output_div.appendChild(div_kilo);
+
+  //Create elements for kilos
+
+  var div_ounces = document.createElement("div");
+  div_ounces.setAttribute("class", "card bg-danger mb-2");
+
+  var sb_div_ounces = document.createElement("div");
+  sb_div_ounces.setAttribute = "card-header";
+
+  var h4_ounces = document.createElement("h4");
+  h4_ounces.textContent = "Ounces:";
+
+  var result_ounces = document.createElement("div");
+  result_ounces.innerHTML = ounces;
+
+  sb_div_ounces.appendChild(h4_ounces);
+  sb_div_ounces.appendChild(result_ounces);
+  div_ounces.appendChild(sb_div_ounces);
+  output_div.appendChild(div_ounces);
+}
+
+//Convert from kilos
+function convertKilos(num) {
+  var pounds = num * 2.20462262;
+  var grams = num * 1000;
+  var ounces = num * 35.274;
+  var output_div = document.querySelector("#output");
+  //Remove all childs
+  while (output_div.firstChild) {
+    output_div.removeChild(output_div.firstChild);
+  }
+
+  //Create Elements for grams
+  var div_pounds = document.createElement("div");
+  div_pounds.setAttribute("class", "card bg-primary mb-2");
+
+  var sb_div_pounds = document.createElement("div");
+  sb_div_pounds.setAttribute = "card-header";
+
+  var h4_pounds = document.createElement("h4");
+  h4_pounds.textContent = "Pounds:";
+
+  var result_pounds = document.createElement("div");
+  result_pounds.innerHTML = pounds;
+
+  sb_div_pounds.appendChild(h4_pounds);
+  sb_div_pounds.appendChild(result_pounds);
+  div_pounds.appendChild(sb_div_pounds);
+  output_div.appendChild(div_pounds);
+
+  //Create elements for grams
+
+  var div_grams = document.createElement("div");
+  div_grams.setAttribute("class", "card bg-success mb-2");
+
+  var sb_div_grams = document.createElement("div");
+  sb_div_grams.setAttribute = "card-header";
+
+  var h4_grams = document.createElement("h4");
+  h4_grams.textContent = "Grams:";
+
+  var result_grams = document.createElement("div");
+  result_grams.innerHTML = grams;
+
+  sb_div_grams.appendChild(h4_grams);
+  sb_div_grams.appendChild(result_grams);
+  div_grams.appendChild(sb_div_grams);
+  output_div.appendChild(div_grams);
 
   //Create elements for kilos
 
